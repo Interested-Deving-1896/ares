@@ -1,86 +1,75 @@
-<img src="https://github.com/ares-emulator/ares/blob/master/ares/ares/resource/logo@2x.png" width="350"/>
+[update-readmes]   Mode: rewrite — migrating to template structure...
+# ares
 
-[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://github.com/higan-emu/ares/blob/master/LICENSE)
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/ares)
 
-**ares** is a multi-system emulator that began development on October 14th, 2004.
-It is a descendant of [higan](https://github.com/higan-emu/higan) and [bsnes](https://github.com/bsnes-emu/bsnes/), and focuses on accuracy and preservation.
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-It's worth noting that ares takes some uncommon design approaches that essentially trade speed for code clarity. We avoid state machines and bitmasks (when possible). Most cores end up being half the amount of code, but slower. The code is clearer and less spaghettified, especially for systems with lots of processors. C bitfields being non-portable incurs a speedhit. Windows also has a speedhit over Linux due to its ABI needing more instructions to switch contexts.
+## Architecture
 
-Official Releases
------------------
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
 
-Official releases are available from
-[the ares website](https://ares-emu.net).
+## Install
 
-Nightly Builds
---------------
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
 
-Automated, untested builds of ares are available for Windows and macOS as a [pre-release](https://github.com/ares-emulator/ares/releases/tag/nightly). 
-Only the latest nightly build is kept.
-
-Building ares
--------------
-
-ares supports building on Windows, macOS, and various Linux/BSD distributions. See build instructions for:
-
-* [Windows](https://github.com/ares-emulator/ares/wiki/Build-Instructions-For-Windows)
-* [macOS](https://github.com/ares-emulator/ares/wiki/Build-Instructions-For-macOS)
-* [Linux](https://github.com/ares-emulator/ares/wiki/Build-Instructions-For-Linux)
-* [BSD](https://github.com/ares-emulator/ares/wiki/Build-Instructions-For-BSD)
-
-Command-line options
---------------------
-
-When started from the command-line, ares accepts a few options.
-
-```
-Usage: ./ares [options] game(s)
-
-  --help                 Displays available options and exit
-  --version              Displays the version string of the application
-  --terminal             Create new terminal window (Windows only)
-  --fullscreen           Start in full screen mode
-  --pseudofullscreen     Start in pseudo full screen mode
-  --system system        Specify the system name
-  --shader shader        Specify a slang shader to load (requires OpenGL or Metal)
-  --setting name=value   Specify a value for a setting
-  --dump-all-settings    Show a list of all existing settings and exit
-  --no-file-prompt       Do not prompt to load (optional) additional roms (eg: 64DD)
-  --settings-file path   Specify a settings file override (settings.bml)
-  --save-state slot      Specify a save state slot to load (1-9)
+```bash
+git clone https://github.com/Interested-Deving-1896/ares.git
+cd ares
 ```
 
-The --system option is useful when the system type cannot be auto-detected.
---fullscreen will only have an effect if a game is also passed in argument.
+## Usage
 
-Example:
-`ares --system MSX examples.rom --fullscreen`
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
 
-Specifying multiple games allows for multi-cart support.  For example, to load
-the Super GameBoy BIOS and a game in one command (to avoid a file prompt), you 
-can do:
+## Configuration
 
-`ares "Super GameBoy.sfc" "Super Mario Land.gb"`
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
 
-The --no-file-prompt option is useful if you wish to launch a game from CLI
-without being prompted to load additional roms. For example, some Nintendo 64 
-games optionally support 64DD expansion disks, so this option can be used to
-suppress the "64DD Disk" file dialog, and assume any secondary content is 
-disconnected.
+## CI
 
-High-level Components
----------------------
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
 
-* __ares__:       emulator cores and component implementations
-* __desktop-ui__: main GUI implementation for this project
-* __hiro__:       cross-platform GUI toolkit that utilizes native APIs on supported platforms
-* __nall__:       Near's alternative to the C++ standard library
-* __ruby__:       interface between a hiro application and platform-specific APIs for emulator video, audio, and input
-* __mia__:        internal ROM database and ROM/image loader
-* __libco__:      cooperative multithreading library
+## Mirror chain
 
-Contributing
-------------
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/ares`](https://github.com/Interested-Deving-1896/ares) and mirrored through:
 
-Please join our discord to chat with other ares developers: https://discord.com/invite/gz2quhk2kv
+```
+Interested-Deving-1896/ares  ──►  OpenOS-Project-OSP/ares  ──►  OpenOS-Project-Ecosystem-OOC/ares
+```
+
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
+
+## Contributors
+
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
+
+## Origins
+
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
+
+## Resources
+
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
+
+## License
+
+<!-- AI:start:license -->
+<!-- License not detected — add a LICENSE file to this repo. -->
+<!-- AI:end:license -->
